@@ -1,5 +1,5 @@
 :root{
-
+      --mune-color:#F9FAFC;
 }
 *{
     -webkit-box-sizing:border-box;
@@ -16,25 +16,37 @@ container{
 nav{
     position: relative;
     width: 100vw;
+    padding: 7px;
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    background-color: gray;
+    background-color: var(--mune-color,gray);
 }
 .nav-menu{ 
     display: flex;
+    width: 75%;
+    justify-content: space-around;
 }
 .nav-menu li{
+    width: 13%;
     list-style: none;
     display: block;
-    width: 75%;
+    
+}
+.nav-menu li::after {
+    content: " ";
+    width: 4px;
+    height: 100vh;
+    background-color: black;
+    z-index: 2;
+
 }
 .nav-menu li a {
     text-decoration: none;
     display: block;
 }
 .nav-cuntery{
-    width:5%;
+    width:3%;
 }
 .nav-cuntery-somble{
     width:5%;  
@@ -47,7 +59,7 @@ nav{
 /* header */
 
 header {
-    padding: 10px;
+    padding: 30px;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -61,12 +73,16 @@ header input{
     width: 80%;
     height: 40px;
     border-radius: 15px;
-
+    background-color: #EFF2F7;
+    border: none;
 }
 .buy-log{
     width: 5%;
 }
 footer{
+    position: relative;
+    top:400px;
     width: 100%;
+    height: 200px;
     background-color: rgb(22, 21, 21);
 }
