@@ -1,0 +1,41 @@
+:root{
+
+}
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+}
+nav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    background-color: gray;
+}
+.nav-menu{ 
+    display: flex;
+}
+.nav-menu li{
+    list-style: none;
+    display: block;
+    width: 75%;
+}
+.nav-menu li a {
+    text-decoration: none;
+    display: block;
+}
+.nav-cuntery{
+    width:5%;
+}
+.nav-cuntery-somble{
+    width:5%;  
+}
+.nav-change-langege{
+    width: 15%;
+    display: flex;
+    justify-content: end;
+}
