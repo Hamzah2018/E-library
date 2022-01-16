@@ -45,15 +45,18 @@ nav{
     justify-content: end;
 }
 /* header */
-.log{
-    width: 5%;
-}
+
 header {
     padding: 10px;
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
+
+.log{
+    width: 5%;
+}
+form{width: 90%;}
 header input{
     width: 80%;
     height: 40px;
