@@ -35,7 +35,13 @@ btnAllowed.addEventListener('click',(e) =>{
         ValidationForm.style.visibility ="hidden";
 }    
  );
-
+const btnRegest = document.getElementById('btn-regest');
+const resgestForm = document.getElementById('regest');
+btnRegest.addEventListener('click',(e) =>{
+    e.preventDefault();
+    ValidationForm.style.visibility ="hidden";
+    resgestForm.style.visibility ="visible";
+});
 // const deadline = '7/3/2022';
 // // const deadline = 'March 31 2022 23:59:59 GMT+0200';
 
