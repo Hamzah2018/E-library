@@ -217,6 +217,7 @@ gap: 1rem;
     display: grid;
     grid-template-columns: 2fr repeat(3,1fr)  1fr;
     grid-template-rows: 1fr auto 1fr 1fr;
+    /* grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line]; */
     position: relative;
     top:400px;
     width: 100%;

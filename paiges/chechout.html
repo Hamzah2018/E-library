@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout</title>
+    <link rel="stylesheet" href="../assests/css/all.css">
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <style>
+          ul{
+              background-color:white;
+              box-shadow: 2px 2px 2px 2px rgb(172, 170, 170);
+              display: flex;
+              width:70%;
+              padding: 20px 20px;
+              overflow: hidden;
+              overflow-wrap: break-word;
+              overflow-x: hidden;
+              border-radius: 50px;
+              justify-content: space-around;
+              text-align: center;
+              list-style-type: none;
+              margin-right: auto;
+              margin-left: auto;
+          }
+         ul::before{
+            content: "";
+            background-color:white;
+            width: 50%;
+            height: 8px;
+            border-radius: 10px;
+            position: absolute;
+            margin-top:77px;
+            left: 74.4%;
+            z-index: 3;
+         }
+        .cricl{
+            background-color:wheat;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            padding-bottom: 20px;
+            direction: ltr;
+        }
+        .active::before{
+            content: "";
+            background-color: green;
+            width: 50%;
+            height: 8px;
+            z-index: 2;
+            position: absolute;
+            margin-top:35px;
+        }
+        .cricl::after{
+            content: "";
+            background-color:white;
+            width: 50%;
+            height: 8px;
+            border-radius: 10px;
+            position: absolute;
+            margin-top:35px;
+        }
+        .active{
+        background-color: green;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        padding-bottom: 20px;
+    }
+    .fas{
+        color: gold;
+        font-size: 2rem;
+        padding-bottom: 10px;
+    }
+    
+ /* Forms  */
+ .payment-form ,.agreement-form {
+     visibility:hidden;
+ }
+.personal-data ,.payment-form , .agreement-form {
+    position: absolute;
+     left: 0;
+     right: 0;
+     top:35%; 
+}
+.container{ 
+    margin-left:auto;
+    margin-right:auto;
+    /* position: fixed; */
+    background-color:#fff;
+    border-radius: 5px;
+    box-shadow: 0 12px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    width:400px;
+    /* max-width: 100%; */
+}
+.header{
+    /* background-color: #f7f7f7; */
+    border-bottom:  1px solid #f0f0f0;
+    padding: 20px 80px;
+    /* text-align: center; */
+}
+
+.form{
+    padding:30px 40px;
+}
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control input{
+    border: 2px solid #f0f0f0;
+    border-radius:4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 80%;
+    background-color: #EFF2F7;
+}
+.btn-content{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    position: relative;
+    top:650px;
+}
+.btn-content button{
+    color: wheat;
+    text-shadow: 2px 2px gray;
+    padding: 5px 20px;
+    background-color: wheat;
+    border-radius: 8px;
+}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <i class="fas fa-check"></i>
+           
+            <div class="cricl"></div>
+        </li>
+        <li>
+            <i class="fas fa-money-check-alt"></i>
+            <div class="cricl"></div>
+        </li>
+        <li>
+            <i class="fas fa-shopping-cart"></i>
+            <div class="cricl"></div>
+        </li>
+    </ul>
+  
+    <div class="personal-data" id="personal-data">
+        <div class="container">
+          <div class="header">
+              <h2> إدخال البيانات الشخصيه</h2>
+          </div>
+          <form class="form" id="form">
+            <div class="form-control">
+                <label for="">الاسم الكامل</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for="">رقم الهويه القوميه</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for=""> رقم الهاتف أو اليميل</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for=""> العنوان</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for=""> المدينه</label>
+                <input type="text" />
+            </div>
+          
+          </form>
+        </div>
+    </div>
+    <div class="payment-form" id="payment-form">
+        <div class="container">
+          <div class="header">
+              <h2> بيانت الدفع</h2>
+          </div>
+          <form class="form" id="form">
+            <div class="form-control">
+                <label for=""> نوع الدفع</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for=""> نوع البطاقه</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for="">   رقم البطاقه</label>
+                <input type="password" />
+            </div>
+            <div class="form-control">
+                <label for=""> تاريخ إنتها كارد</label>
+                <input type="text" />
+            </div>
+          
+          </form>
+        </div>
+    </div>
+    <div class="agreement-form" id="agreement-form">
+        <div class="container">
+          <div class="header">
+              <h2>تاكيد الشراء</h2>
+          </div>
+          <form class="form" id="form">
+            <div class="form-control">
+                <label for="">أسما المنتجات</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for=""> أصناف المنتجات</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for="">إجمالي المبلغ</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for=""> إجمالى المبلغ مع التخفيض</label>
+                <input type="text" />
+            </div>
+            <div class="form-control">
+                <label for=""> خدمة التوصيل</label>
+                <input type="text" />
+            </div>
+          
+          </form>
+        </div>
+    </div>
+    <div class="btn-content">
+         
+        <button class="prvs-btn" id="btn-prv">
+           <i class="fas fa-angle-right"></i>
+            السابق
+           
+            <!-- src="../assests/js/app.js" -->
+        </button>
+        <button class="nxt-btn" id="btn-nxt">
+           
+            التالي
+            <i class="fas fa-angle-left"></i>
+        </button>
+   </div>
+    <script >
+        const btnPrv = document.getElementById("btn-prv");
+const btnNxt = document.getElementById("btn-nxt");
+const steps = document.querySelectorAll(".cricl");
+let index = 0;
+btnNxt.addEventListener("click",function (){
+index++;
+ShowForm(index);
+    if(index >= steps.length)
+{
+    index=steps.length;
+}
+steps.forEach((item,i)=>{
+    if(i<index){
+        item.classList.add('active');
+    }
+});
+
+
+});
+btnPrv.addEventListener("click",function (){
+    index--;
+    ShowForm(index);
+        if(index <= 0)
+    {
+        index=0;
+    }
+    steps.forEach((item,i)=>{
+        if(i>=index){
+            item.classList.remove('active');
+        }
+    });
+
+    
+    });
+    // show and not
+   
+//let btnAllowed = document.getElementById('btn-allowed'); 
+ 
+ let personalForm = document.getElementById('personal-data');
+ let PaymentForm = document.getElementById('payment-form');
+ let AgreementForm = document.getElementById('agreement-form');
+ let n =0;
+ function ShowForm(n){
+switch(n){
+    case 0:
+     personalForm.style.visibility ="visible";
+     PaymentForm.style.visibility ="hidden";
+     AgreementForm.style.visibility ="hidden";
+    break;
+    case 1:
+    PaymentForm.style.visibility ="visible";
+    personalForm.style.visibility ="hidden";
+    AgreementForm.style.visibility ="hidden";
+    break;
+    case 2:
+     AgreementForm.style.visibility ="visible";
+     personalForm.style.visibility ="hidden";
+     PaymentForm.style.visibility ="hidden";
+}
+ }
+   </script>
+</body>
+</html>
