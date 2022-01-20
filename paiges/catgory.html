@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat</title>
+    <link rel="stylesheet" href="../assests/css/cat.css">
+    <link rel="stylesheet" href="../assests/css/all.css">
+</head>
+<body>
+    <header>
+        <ul class="indicator">
+            <li data-filter="all" class="active"> <a href="#">الكل</a> </li>
+            <li data-filter="Book"> <a href="#">الكبت</a> </li>
+            <li data-filter="Phones"> <a href="#">الهواتف</a> </li>
+            <li data-filter="Watch"> <a href="#">الساعات</a> </li>
+            <li data-filter="Shoes"> <a href="#">الجزمات</a> </li>
+            <li data-filter="Accesseries"> <a href="#">الاكسس وارات</a> </li>
+        </ul>
+        <div class="filter-condition">
+            <span>يعرض</span>
+            <select name="" id="select">
+                <option value="Default">الافتراض</option>
+                <option value="LowToHigh">تصاعطي</option>
+                <option value="HighToLow">تنازلي</option>
+            </select>
+        </div>
+    </header>
+    <div class="product-field">
+        <ul class="items">
+            <li class="data-category">
+                <picture>
+                    <img src="../assests/images/catagers/phones/phone1.jpg" alt="">
+                </picture>
+                <div class="detail">
+                    <p class="icon">
+                        <span><i class="far fa-heart"></i></span>
+                        <span><i class="far fa-share-square"></i></span>
+                        <span><i class="fas fa-shopping-basket"></i></span>
+                    </p>
+                    <strong>هاتف</strong>
+                    <span> هاتف راع</span>
+                    <small>إشتري الان</small>
+                </div>
+                <h4>$750.50</h4>
+            </li>
+            <li class="data-category">
+                <picture>
+                    <img src="../assests/images/catagers/whatches/whatch4.jpg" alt="">
+                </picture>
+                <div class="detail">
+                    <p class="icon">
+                        <span><i class="far fa-heart"></i></span>
+                        <span><i class="far fa-share-square"></i></span>
+                        <span><i class="fas fa-shopping-basket"></i></span>
+                    </p>
+                    <strong>ساعه</strong>
+                    <span>ساعه راعه</span>
+                    <small>إشتري الان</small>
+                </div>
+                <h4>$45.78</h4>
+            </li>
+
+        </ul>
+    </div>
+   <script>
+       let indicator = document.querySelector('.indecator').childern;
+       let li = document.querySelector('.items').childern;
+       for(let i of li ){
+           const name = i.querySelector('strong');
+           const x = name.textContent;
+           i.setAttribute('data-category',x);
+       }
+       for(let i=0; i<indicator.length;i++)
+       {
+           indicator[i].onclick = function(){
+               for(let x= 0; x<indicator.length;x++)
+               {
+                   indicator[x].classlist.remove('active');
+                   const displayitems = this.getAttribute('data-filter');
+               }
+           }
+       }
+
+   </script>
+           
+</body>
+</html>

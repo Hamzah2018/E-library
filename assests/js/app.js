@@ -42,6 +42,19 @@ btnRegest.addEventListener('click',(e) =>{
     ValidationForm.style.visibility ="hidden";
     resgestForm.style.visibility ="visible";
 });
+const bookImgContainer = document.querySelectorAll('.book-img-container');
+const bookCat = document.getElementById('book-cat');
+const MainDiv = document.getElementById('main-div');
+const BodyBac = document.getElementById('body');
+// const CatSection = document.getElementById('cat-section');
+bookImgContainer.forEach(element => {
+ element.addEventListener("click",(e) => {
+    // CatSection.style.position ='absolute';
+    element.classList.add('chosen-img');
+    
+
+ });
+});
 // const deadline = '7/3/2022';
 // // const deadline = 'March 31 2022 23:59:59 GMT+0200';
 
