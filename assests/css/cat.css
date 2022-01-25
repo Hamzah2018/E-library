@@ -12,7 +12,7 @@ main{
     margin: 60px auto;
     font-family: sans-serif;
 }
-header{
+.main-header{
     width: 100%;
     height: 100%;
     border-bottom: 2px solid #e5e5e5;
@@ -20,7 +20,7 @@ header{
     align-items: center;
     align-content: space-between;
 }
-header ul li{
+.main-header ul li{
     list-style: none;
     padding: 20px;
     margin: 10px;
@@ -28,14 +28,14 @@ header ul li{
     font-size: 20px;
     border-radius: 35px;
 }
-header ul li a{
+.main-header ul li a{
 color: inherit;
 text-decoration: none;
 }
-header ul li.active {
+.main-header ul li.active {
     background: var(--gra);
 } 
-header ul li.active a{
+.main-header ul li.active a{
     color: white;
     font-weight: bold;
 }
@@ -106,4 +106,7 @@ picture{
     height: 55%;
     padding: 20px 5px;
     z-index: 4;
+}
+ul{
+    list-style: none;
 }

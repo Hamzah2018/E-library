@@ -1,3 +1,111 @@
+const showMenu = document.getElementById('menu-show');
+const Menu = document.getElementById('nav');
+// show menu
+showMenu.addEventListener('click',(e)=>{
+    e.preventDefault();
+        Menu.style.visibility = 'visible';
+});
+
+
+const slideFrame = document.querySelector('.slide-img-frame');
+const sliderImage = document.querySelectorAll('.slide-img-frame img');
+
+const sliderPreBtn = document.querySelector('#prevBtn' );
+const sliderNextBtn = document.querySelector('#nextBtn');
+let counterSlide = 0;
+const sizeSlide = sliderImage[0].clientWidth;
+slideFrame.style.transform = 'translateX(' +(sizeSlide * counterSlide) + 'px)';
+// Button Listeners
+
+
+
+
+
+
+// the slider of main imges
+sliderNextBtn.addEventListener('click',()=>{
+    // console.log(counterSlide);
+    // console.log(sliderImage.length -1);
+    if(counterSlide >= sliderImage.length -1) return;
+slideFrame.style.transition = "transform 0.4s ease-in-out";
+counterSlide++;
+slideFrame.style.transform = 'translateX(' +(+sizeSlide  * counterSlide) + 'px)';
+
+});
+sliderPreBtn.addEventListener('click',()=>{
+    // console.log(counterSlide);
+    if(counterSlide <=0) return;
+    // window.alert(counterSlide);
+    // if(counterSlide <= (sliderImage.length -1)) return;
+    slideFrame.style.transition = "transform 0.4s ease-in-out";
+    counterSlide--;
+    slideFrame.style.transform = 'translateX(' +(sizeSlide  * counterSlide) + 'px)';
+
+   
+    });
+    // 
+//     slideFrame.addEventListener ('transitionend', ()=>
+// {
+// if(sliderImage[counterSlide].id === 'last-clone'){ 
+    
+// slideFrame.style.transform = "none";
+// counterSlide = slideFrame.length -2;
+// slideFrame.style.transform = 'translateX(' +(-sizeSlide * counterSlide) + 'px)';
+// }                                 
+// if(sliderImage[counterSlide].id === 'first-clone'){ 
+    
+//     slideFrame.style.transform = "none";
+//     counterSlide = slideFrame.length -counterSlide;
+//     slideFrame.style.transform = 'translateX(' +(-sizeSlide * counterSlide) + 'px)';
+//     }
+// }
+// );
+//  img to catagres
+const btnDisplay = document.getElementById('btn-display');
+const pub = document.getElementById('PopUp');
+const callImage = image => {
+    document.getElementById("imgView").setAttribute("src",image.getAttribute("src"));
+    // document.getElementById("PopUp").style.display = "block";
+    pub.style.display ='block';
+}
+
+btnDisplay.addEventListener("click",(e)=>
+{
+    e.preventDefault();
+    pub.style.display ='none';
+}
+);
+
+
+
+
+
+
+
+
+
+// const showImgQ  = 
+// const imgsConainerQ = document.getElementById('book-cat');
+// const BodyBacQ = document.getElementById('body');
+// let imgBtnQ =[];
+// imgBtnQ = document.querySelectorAll('.book-img'); 
+// imgBtnQ.forEach(element =>{
+// element.addEventListener('click',(e)=>{
+//     BodyBacQ.style.backgroundColor="black";
+//     element.src = e.target.src;
+// })
+// }    
+//     );
+
+
+// for(let i=0;i<showImgQ.length;i++){
+//     showImgQ[i].addEventListener('click',function(e){
+//         imgsConainerQ.setAttribute('src',img);
+//         BodyBacQ.style.backgroundColor= "gray";
+//     })
+// }
+
+
 const countDown=()=>{
     const upperDate = new Date('jan 20, 2022 00:00:00').getTime();
     const currentDate = new Date().getTime();
@@ -42,19 +150,21 @@ btnRegest.addEventListener('click',(e) =>{
     ValidationForm.style.visibility ="hidden";
     resgestForm.style.visibility ="visible";
 });
-const bookImgContainer = document.querySelectorAll('.book-img-container');
-const bookCat = document.getElementById('book-cat');
-const MainDiv = document.getElementById('main-div');
-const BodyBac = document.getElementById('body');
-// const CatSection = document.getElementById('cat-section');
-bookImgContainer.forEach(element => {
- element.addEventListener("click",(e) => {
-    // CatSection.style.position ='absolute';
-    element.classList.add('chosen-img');
+// const bookImgContainer = document.querySelectorAll('.book-img-container');
+// const bookCat = document.getElementById('book-cat');
+// const MainDiv = document.getElementById('main-div');
+// const BodyBac = document.getElementById('body');
+// // const CatSection = document.getElementById('cat-section');
+// bookImgContainer.forEach(element => {
+//  element.addEventListener("click",(e) => {
+//     // CatSection.style.position ='absolute';
+//     element.classList.add('chosen-img');
     
 
- });
-});
+//  });
+// });
+
+
 // const deadline = '7/3/2022';
 // // const deadline = 'March 31 2022 23:59:59 GMT+0200';
 

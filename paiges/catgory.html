@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat</title>
     <link rel="stylesheet" href="../assests/css/cat.css">
     <link rel="stylesheet" href="../assests/css/all.css">
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <title>E-Library Catgories</title>
+</head>
 </head>
 <body>
-    <header>
+    <nav >
+        <ul class = "nav-menu">
+            <li><a href="">أدخل حسابك أو سجل الان</a></li>
+            <li><a href="">الرئيسية</a></li>
+            <li><a href="">من نحن </a></li>
+            <li><a href="">اتصل بنا</a></li>
+            <li><a href=""></a>المساعدة</li>
+            <li><a href=""></a>سياسية الحصوصية</li>
+        </ul>
+        <div class="nav-cuntery" >اليمن</div>
+        <div class="nav-cuntery-somble">YER</div>
+      <div class="nav-change-langege"><div>English </div></div>
+    </div>
+    </nav>
+    
+    <header >
+        <div class="log"></div>
+        <form action="">
+            <input type="search">
+        </form>
+        <div class="buy-log"></div>
+    </header>
+    <div class="main-header">
         <ul class="indicator">
             <li data-filter="all" class="active"> <a href="#">الكل</a> </li>
             <li data-filter="Book"> <a href="#">الكبت</a> </li>
@@ -26,7 +50,7 @@
                 <option value="HighToLow">تنازلي</option>
             </select>
         </div>
-    </header>
+    </div>
     <div class="product-field">
         <ul class="items">
             <li class="data-category">
@@ -100,6 +124,51 @@
         </ul>
     </div>
     </div>
+    <footer>
+        <div class="footer-1">
+        <div class="col1">أنضم إلى نشرتنا البريد</div>
+        <div class="col2">خدمة العملاء</div>
+        <div class="col3">خدمات</div>
+        <div class="col4">روابط سريعه</div>
+        <div class="col5">عن جرير</div>
+        <div class="col1 enter-email">
+            <form action="" style="float:right;">
+                <input type="email" placeholder="أدخل بريدك الاكتروني"> 
+                <button>إشترك</button>
+            </form>
+        </div>
+        
+        <div class="col2">مبيعات الشركات</div>
+        <div class="col3">خدمة تقصيد المشريات </div>
+        <div class="col4">إصدارات جرير</div>
+        <div class="col5">من حن</div>
+        <div class="col2">الأسالة المتكررة</div>
+        <div class="col3">خدمات مابعد البيع</div>
+        <div class="col4">قارئ الجزيره</div>
+        <div class="col5">الحوكمة</div>
+        <div class="col2">دليل التسوق الطبوعات</div>
+        <div class="col3">خدمة الحماية الشامله</div>
+        <div class="col4">شركاء برامج المكافئات</div>
+        <div class="col5">علاقات المستثمرين والتقارير</div>
+        <!-- form here rebeated  -->
+        <div class="col2">مبيعات الشركات</div>
+        <div class="col3">خدمة تقصيد المشريات </div>
+        <div class="col4">إصدارات جرير</div>
+        <div class="col5">من حن</div>
+        <div class="col2">الأسالة المتكررة</div>
+        <div class="col3">خدمات مابعد البيع</div>
+        <div class="col4">قارئ الجزيره</div>
+        <div class="col5">الحوكمة</div>
+        <div class="col1">تواصل معنا</div>
+        <div class="col2">دليل التسوق الطبوعات</div>
+        <div class="col3">خدمة الحماية الشامله</div>
+        <div class="col4">شركاء برامج المكافئات</div>
+        <div class="col5">علاقات المستثمرين والتقارير</div>
+    </div>
+    <div class="footer-2">
+        
+    </div>
+    </footer>
    <script>
        let indicator = document.querySelector('.indicator').childern;
        let li = document.querySelector('.items').childern;
