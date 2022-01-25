@@ -3,7 +3,12 @@ const Menu = document.getElementById('nav');
 // show menu
 showMenu.addEventListener('click',(e)=>{
     e.preventDefault();
-        Menu.style.visibility = 'visible';
+    if(Menu.style.visibility === 'visible'){
+        Menu.style.visibility ='hidden';
+    }else{
+        Menu.style.visibility ='visible';
+    }
+        
 });
 
 
