@@ -40,6 +40,9 @@ nav{
     width: 10px;
     z-index: 16;
 }
+..toggle-menu{
+    z-index: 9;
+}
 .tog-menu-p{
  font-size: 9px;
  color: black;
@@ -113,7 +116,7 @@ margin-right:10px ;
     nav{
         display:flex;
        flex-direction: column;
-       visibility: hidden;
+       visibility:hidden;
        /* align-items: center; */
         z-index: 4;
         width: 80%;
@@ -203,6 +206,8 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: red;
+    z-index: -1;
     /* width: 100%; */
     border:2px solid rgb(223, 223, 223);
 }
@@ -264,7 +269,7 @@ header input{
         position: relative;
         /* justify-content: end; */
         /* margin-top: -50px; */
-        width: 85%;
+        width: 80%;
         margin-top: -1000px;
         
     }
