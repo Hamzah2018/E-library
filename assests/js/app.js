@@ -1,3 +1,37 @@
+
+const booksContiner = document.querySelector('.books');
+const bookImage = document.querySelectorAll('.books div img');
+const bookImagedd = document.q
+const preBookBtn = document.querySelector('#prevBtnBook' );
+const nextBookBtn = document.querySelector('#nextBtnBook');
+let bookCounter = 0;
+const bookSize = bookImage[0].clientWidth;
+booksContiner.style.transform = 'translateX(' +(bookSize * bookCounter) + 'px)';
+
+nextBookBtn.addEventListener('click',()=>{
+  
+    // console.log(sliderImage.length -1);
+    if(bookCounter >= bookImage.length -1) return;
+booksContiner.style.transition = "transform 0.4s ease-in-out";
+bookCounter++;
+booksContiner.style.transform = 'translateX(' +(+bookSize  * booksContiner) + 'px)';
+console.log(bookCounter);
+});
+preBookBtn.addEventListener('click',()=>{
+    console.log(bookCounter);
+    if(bookCounter <=0) return;
+    // window.alert(counterSlide);
+    // if(counterSlide <= (sliderImage.length -1)) return;
+    booksContiner.style.transition = "transform 0.4s ease-in-out";
+     bookCounter--;
+    booksContiner.style.transform = 'translateX(' +(bookSize  * booksContiner) + 'px)';
+    });
+
+
+
+
+
+
 const showMenu = document.getElementById('menu-show');
 const Menu = document.getElementById('nav');
 // show menu
@@ -21,12 +55,6 @@ let counterSlide = 0;
 const sizeSlide = sliderImage[0].clientWidth;
 slideFrame.style.transform = 'translateX(' +(sizeSlide * counterSlide) + 'px)';
 // Button Listeners
-
-
-
-
-
-
 // the slider of main imges
 sliderNextBtn.addEventListener('click',()=>{
     // console.log(counterSlide);
@@ -45,8 +73,6 @@ sliderPreBtn.addEventListener('click',()=>{
     slideFrame.style.transition = "transform 0.4s ease-in-out";
     counterSlide--;
     slideFrame.style.transform = 'translateX(' +(sizeSlide  * counterSlide) + 'px)';
-
-   
     });
     // 
 //     slideFrame.addEventListener ('transitionend', ()=>
