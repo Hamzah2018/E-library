@@ -13,7 +13,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    direction: rtl;
+    /* direction: rtl; */
 }
 html{
     scroll-behavior:smooth;
@@ -23,6 +23,7 @@ ul{
 }
 body{
     font-family: Tajawal;
+    direction: rtl;
 }
 /* nav  */
 nav{
