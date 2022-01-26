@@ -1,3 +1,8 @@
+function ChangeLang(){                       
+    var SelectLag = document.getElementById("SelectLag").value;
+    var langegeTyp = document.getElementById("body");
+    langegeTyp.style.direction = SelectLag;
+}
 
 const booksContiner = document.querySelector('.books');
 const bookImage = document.querySelectorAll('.books div img');
