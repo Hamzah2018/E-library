@@ -27,8 +27,9 @@
           <!-- <div class=>English</div> -->
           <div class=""nav-change-langege" onchange ="ChangeLang()">
             <select id ="SelectLag">
-                <option value="rtl">عربي</option>
-                <option value="ltr">English</option>
+                
+                <option value="rtl">English</option>
+                <option value="ltr">عربي</option>
             </select>
         </div>
         </div>
@@ -72,29 +73,45 @@
            <div class="main-body">
                 <section class="offers">
                     <div class="card one">
-                        <img src="assests/images/offer-1.jpg" alt="">
+                        <img id="boy-bag" src="assests/images/offer-1.jpg" alt="">
                         <p> حفاب اولاد</p>
                         <div class="time-container">
-                            <span id="days"></span> 
-                            <span id="hours"></span> :
-                            <span id="minutes"></span> :
-                            <span id="seconds"></span> 
+                            <h2 id="days2">00</h2> 
+                            <small>days</small>
+                            <h2 id="hours2">00</h2> 
+                            <small>hours</small>
+                            <h2 id="minutes2">00</h2> 
+                            <small>mintes</small>
+                            <h2 id="seconds2">00</h2> 
+                            <small>seconds</small>
                         </div>
                     </div>
                     <div class="card tow">
-                        <img src="assests/images/offer-2.jpg" alt="">
+                        <img id="girl-bag" src="assests/images/offer-2.jpg" alt="">
                         <p>حقاب بناتيه</p>
                         <div class="time-container">
-                            <span>سارع في الشراء</span> 
-                        
+                            <h2 id="days3">00</h2> 
+                            <small>days</small>
+                            <h2 id="hours3">00</h2> 
+                            <small>hours</small>
+                            <h2 id="minutes3">00</h2> 
+                            <small>mintes</small>
+                            <h2 id="seconds3">00</h2> 
+                            <small>seconds</small>
                         </div>
                     </div>
                     <div class="card three">
-                        <img src="assests/images/offer-3.jpg" alt="">
+                        <img id="sport-bag" src="assests/images/offer-3.jpg" alt="">
                         <p>حقاب رياضيه</p>
                         <div class="time-container">
-                            <span >الكميه محدوده</span>
-       
+                            <h2 id="days">00</h2> 
+                            <small>days</small>
+                            <h2 id="hours">00</h2> 
+                            <small>hours</small>
+                            <h2 id="minutes">00</h2> 
+                            <small>mintes</small>
+                            <h2 id="seconds">00</h2> 
+                            <small>seconds</small>
                         </div>
                     </div>
                     <!-- <div class="card-4">
@@ -108,7 +125,7 @@
                             <div>
                                 <a href="#">الرئيسية</a> / <a href="#">الكتب العربية</a> / <a href="#">كتب إلكترونية</a>
                             </div> 
-                            <article>كتب إلكترونيه</article>
+                            <article>كتب إلكترونيه</article> 
                       </aside>
                         <section class="books" id="book-cat">
                             <div class="book-img-container"><img onclick="callImage(this);"  class="book-img" src="assests/images/catagers/books/book1.jpg" alt=""></div>
@@ -143,17 +160,30 @@
         </div> 
     <footer>
         <div class="footer-1">
-        <div class="col1">أنضم إلى نشرتنا البريد</div>
-        <div class="col2">خدمة العملاء</div>
-        <div class="col3">خدمات</div>
-        <div class="col4">روابط سريعه</div>
-        <div class="col5">عن جرير</div>
-        <div class="col1 enter-email">
+             <div class="first-line" style="display: none;"> 
+        <div clasbigs="first-line">أنضم إلى نشرتنا البريد</div>
+        <div class="first-line">خدمة العملاء</div>
+        <div class="first-line">خدمات</div>
+        <div class="first-line">روابط سريعه</div>
+        <div class="first-line">عن جرير</div>
+        <div class="enter-email">
             <form action="" style="float:right;">
                 <input type="email" placeholder="أدخل بريدك الاكتروني"> 
                 <button>إشترك</button>
             </form>
         </div>
+    </div>
+    <div class="col1 ">أنضم إلى نشرتنا البريد</div>
+    <div class="col2 ">خدمة العملاء</div>
+    <div class="col3">خدمات</div>
+    <div class="col4 ">روابط سريعه</div>
+    <div class="col5 ">عن جرير</div>
+    <div class="col1 enter-email  big-f">
+        <form action="" style="float:right;">
+            <input type="email" placeholder="أدخل بريدك الاكتروني"> 
+            <button>إشترك</button>
+        </form>
+    </div>
         
         <div class="col2">مبيعات الشركات</div>
         <div class="col3">خدمة تقصيد المشريات </div>

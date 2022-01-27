@@ -1,4 +1,60 @@
-function ChangeLang(){                       
+
+let day1 = document.getElementById('days');
+let  hour1 = document.getElementById('hours');
+let  mint1 = document.getElementById('minutes');
+let imgSport =document.getElementById('sport-bag');
+ let second1 = document.getElementById('seconds');
+ let day2 = document.getElementById('days2');
+let  hour2 = document.getElementById('hours2');
+let  mint2 = document.getElementById('minutes2');
+ let second2 = document.getElementById('seconds2');
+ let imgBoys =document.getElementById('boy-bag');
+ let day3 = document.getElementById('days3');
+let  hour3 = document.getElementById('hours3');
+let  mint3 = document.getElementById('minutes3');
+ let second3 = document.getElementById('seconds3');
+ let imgGirls =document.getElementById('girl-bag');
+//  const upperDate = new Date('jan 29, 2022 00:00:00').getTime();
+ let SportBag = new Date("March 7, 2022 23:59:59").getTime();
+ let boyBag = new Date("March 5, 2022 23:59:59").getTime();
+ let girltBag = new Date("March 4, 2022 23:59:59").getTime();
+function countDown(lastD,d,h,m,s,img){
+    const currentDate = new Date().getTime();
+    const diffDate = lastD - currentDate;
+    // alert(diffDate);
+    const second = 1000;
+    const minutes = second * 60;
+    const hours = minutes * 60;
+    const days = hours * 24; 
+    //alert(diffDate/days);
+    const remanDays = Math.floor(diffDate/days);
+    // const remanHours = Math.floor(diffDate/hours);
+    // const remanMintes = Math.floor(diffDate/minutes);
+    // const remanSecondes = Math.floor(diffDate/second);
+    // const remanDate = Math.ceil(diffDate/days);
+    const remanHours = Math.floor((diffDate%days)/hours);
+    const remanMintes = Math.floor((diffDate%hours)/minutes);
+    const remanSecondes = Math.floor((diffDate%minutes)/second);
+     // alert(remanMintes);
+    // d = document.getElementById('days');
+    //  h = document.getElementById('hours');
+    //  m = document.getElementById('minutes');
+    //  s = document.getElementById('seconds');
+    d.innerHTML = remanDays;
+    h.innerHTML = remanHours;
+    m.innerHTML = remanMintes;
+    s.innerHTML = remanSecondes;
+    if(diffDate < 0){
+        clearInterval(countDown());
+        img.document.style.display ='none';
+    }
+    }
+    setInterval(countDown(SportBag,day1,hour1,mint1,second1,imgSport),1000);
+    //setInterval(countDown(){SportBag,day1,hour1,mint1,second1,imgSport},1000);
+    setInterval(countDown(boyBag,day2,hour2,mint2,second2,imgBoys),1000);
+    setInterval(countDown(girltBag,day3,hour3,mint3,second3,imgGirls),1000);
+
+function ChangeLang(){                      
     var SelectLag = document.getElementById("SelectLag").value;
     var langegeTyp = document.getElementById("body");
     langegeTyp.style.direction = SelectLag;
@@ -6,7 +62,7 @@ function ChangeLang(){
 
 const booksContiner = document.querySelector('.books');
 const bookImage = document.querySelectorAll('.books div img');
-const bookImagedd = document.q
+// const bookImagedd = document.q
 const preBookBtn = document.querySelector('#prevBtnBook' );
 const nextBookBtn = document.querySelector('#nextBtnBook');
 let bookCounter = 0;
@@ -142,35 +198,35 @@ btnDisplay.addEventListener("click",(e)=>
 // }
 
 
-const countDown=()=>{
-    const upperDate = new Date('jan 20, 2022 00:00:00').getTime();
-    const currentDate = new Date().getTime();
-    const diffDate = upperDate-currentDate;
-    // alert(diffDate);
-    const second = 1000;
-    const minutes = second * 60;
-    const hours = minutes * 60;
-    const days = hours * 24; 
-    //alert(diffDate/days);
-    const remanDays = Math.floor(diffDate/days);
-    // const remanHours = Math.floor(diffDate/hours);
-    // const remanMintes = Math.floor(diffDate/minutes);
-    // const remanSecondes = Math.floor(diffDate/second);
-    // const remanDate = Math.ceil(diffDate/days);
-    const remanHours = Math.floor((diffDate%days)/hours);
-    const remanMintes = Math.floor((diffDate%hours)/minutes);
-    const remanSecondes = Math.floor((diffDate%minutes)/second);
-    // alert(remanMintes);
-    var d = document.getElementById('days');
-    var h = document.getElementById('hours');
-    var m = document.getElementById('minutes');
-    var s = document.getElementById('seconds');
-    d.innerHTML = remanDays;
-    h.innerHTML = remanHours;
-    m.innerHTML = remanMintes;
-    s.innerHTML = remanSecondes;
-    }
-    setInterval(countDown,1000);
+// const countDown=()=>{
+//     const upperDate = new Date('jan 20, 2022 00:00:00').getTime();
+//     const currentDate = new Date().getTime();
+//     const diffDate = upperDate-currentDate;
+//     // alert(diffDate);
+//     const second = 1000;
+//     const minutes = second * 60;
+//     const hours = minutes * 60;
+//     const days = hours * 24; 
+//     //alert(diffDate/days);
+//     const remanDays = Math.floor(diffDate/days);
+//     // const remanHours = Math.floor(diffDate/hours);
+//     // const remanMintes = Math.floor(diffDate/minutes);
+//     // const remanSecondes = Math.floor(diffDate/second);
+//     // const remanDate = Math.ceil(diffDate/days);
+//     const remanHours = Math.floor((diffDate%days)/hours);
+//     const remanMintes = Math.floor((diffDate%hours)/minutes);
+//     const remanSecondes = Math.floor((diffDate%minutes)/second);
+//     // alert(remanMintes);
+//     var d = document.getElementById('days');
+//     var h = document.getElementById('hours');
+//     var m = document.getElementById('minutes');
+//     var s = document.getElementById('seconds');
+//     d.innerHTML = remanDays;
+//     h.innerHTML = remanHours;
+//     m.innerHTML = remanMintes;
+//     s.innerHTML = remanSecondes;
+//     }
+//     setInterval(countDown,1000);
 let ValidationForm = document.getElementById('login-regest');
 let btnAllowed = document.getElementById('btn-allowed');
 btnAllowed.addEventListener('click',(e) =>{

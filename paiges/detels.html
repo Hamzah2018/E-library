@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assests/css/all.css">
-    <link rel="stylesheet" href="../assests/css/style.css">
     <style>
         :root{
             --mune-color:#F9FAFC;
@@ -14,14 +13,23 @@
            --light-footer-color:#E6E6E6;
            --red-color:#D4070E;
            --blue-color:#2675C2;
+           --text-red:#F77DC8;
       }
-        .catgers{
+        .catgers-1{
             width: 100%;
-            display: flex;
+       /*     display: flex;
             justify-content: space-around;
-            align-items: flex-start;
+            align-items: flex-start;*/
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             padding: 50px 5px;
             }
+            @media(max-width:767px){
+                .catgers-1{
+                    grid-template-columns: 1fr;
+                }
+            }
+            .cat-descrip{margin:10px 10px;}
             .book-img-container{
                 margin:40px;
                 padding-top:10px;
@@ -103,39 +111,59 @@
                 border: 2px solid rgb(219, 216, 216);
                 box-shadow: 1px 1px 1px rgb(172, 170, 170); 
             }
+            .payment-deteails{
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+            }
+            .left-deat{
+                display: flex;
+                justify-content: end;
+            }
+            .poth-side-deatal{
+                display: flex;
+                justify-content: space-between;
+            }
     </style>
+    <link rel="stylesheet" href="../assests/css/style.css">
     <title>E-Library</title>
-</head>
-<body id="body">
-   <dir style="padding-right: 15px;padding-top: 8px;"> 
-       <i class="fas fa-bars toggle-menu"></i>
-       <p class="tog-menu-p">القائمه</p>
- </dir>
-        <nav >
-            <ul class = "nav-menu">
-                <li><a href="">أدخل حسابك أو سجل الان</a></li>
-                <li><a href="">الرئيسية</a></li>
-                <li><a href="">من نحن </a></li>
-                <li><a href="">اتصل بنا</a></li>
-                <li><a href="">المساعدة</a></li>
-                <li><a href="">سياسة الخصوصيه</a></li>
-            </ul>
-            <div class="nav-cuntery">اليمن</div>
-            <div class="nav-cuntery-somble">YER</div>
-          <div class="nav-change-langege"><div>English </div></div>
-        </div>
-        </nav>
-        
-        <header >
-            <div class="log"></div>
-            <form action="">
-                <!-- <i class="fas fa-search"></i> -->
-                <input type="search" >
-               
-
-            </form>
-            <div class="buy-log"><i class="fas fa-shopping-cart"></i></div>
-        </header>
+    <body>
+    <dir style="padding-right: 15px;padding-top: 8px;"> 
+        <i class="fas fa-bars toggle-menu" id="menu-show"></i>
+        <p class="tog-menu-p" >القائمه</p>
+  </dir>
+         <nav id="nav" >
+             <ul class = "nav-menu">
+                 <li><a href="">أدخل حسابك أو سجل الان</a></li>
+                 <li><a href="">الرئيسية</a></li>
+                 <li><a href="">من نحن </a></li>
+                 <li><a href="">اتصل بنا</a></li>
+                 <li><a href="">المساعدة</a></li>
+                 <li><a href="">سياسة الخصوصيه</a></li>
+             </ul>
+             <div class="nav-cuntery"><span>اليمن</span>&nbsp;<span>YER</span>  </div>
+             <!-- <div class="nav-cuntery-somble">YER</div> -->
+           <!-- <div class=>English</div> -->
+           <div class=""nav-change-langege" onchange ="ChangeLang()">
+             <select id ="SelectLag">
+                 
+                 <option value="rtl">English</option>
+                 <option value="ltr">عربي</option>
+             </select>
+         </div>
+         </div>
+         </nav>
+         
+         <header>
+             <div class="log"><img src="assests/images/logo.png"  alt=""></div>
+             <div class="search-form-container">
+             <form action="" class="search-form">
+                 <i class="fas fa-search"></i>
+                 <input type="search" placeholder ="البحث">
+             </form>
+             <div class="buy-log"><i class="fas fa-shopping-cart"></i></div>
+         </div>
+         </header>
         <main id="main-div" >
            <div class="slide">
              <figure >
@@ -151,43 +179,7 @@
              </figure>
            </div>
            <div class="main-body">
-                <section class="offers">
-                    <div class="card-1">
-                        <img src="assests/images/offer-1.jpg" alt="">
-                        <p> حفاب اولاد</p>
-                        <div class="time-container">
-                            <span id="days"></span> 
-                            <span id="hours"></span> :
-                            <span id="minutes"></span> :
-                            <span id="seconds"></span> 
-                        </div>
-                    </div>
-                    <div class="card-2">
-                        <img src="assests/images/offer-2.jpg" alt="">
-                        <p>حقاب بناتيه</p>
-                        <div class="time-container">
-                            <span id="days">سارع في الشراء</span> 
-                            <span id="hours"></span> 
-                            <span id="minutes"></span> 
-                            <span id="seconds"></span>
-                        </div>
-                    </div>
-                    <div class="card-3">
-                        <img src="assests/images/offer-3.jpg" alt="">
-                        <p>حقاب رياضيه</p>
-                        <div class="time-container">
-                            <span id="days-1">الكميه محدوده</span>
-                            <span id="hours-1"></span> 
-                            <span id="minutes-1"></span> 
-                            <span id="seconds-1"></span>
-                        </div>
-                    </div>
-                    <!-- <div class="card-4">
-                        <img src="" alt="">
-                        <p></p>
-                        <div></div>
-                    </div> -->
-                </section>
+           
                 <aside class="cat-descrip">
                     <div>
                         <a href="#">الرئيسية</a> / <a href="#">الكتب العربية</a>
@@ -195,20 +187,42 @@
                         / <a href="#">روائع من حيات الصحابة</a>
                     </div> 
                 </aside>
-                <section class="catgers" id = "cat-section">
+                <section class="catgers-1" id = "cat-section">
                         <section class="book" id="book-cat">
                             <div class="book-img-container"><img onclick="callImage(this);"  class="book-img" src="../assests/images/catagers/books/book3.jpg" alt=""></div>   
                         </section>
                         <section class="payment-deteails">
                             <h1>روائع من حياة الصحابة</h1>
                             <div><a href="#">عرض المزيد   <i class="fas fa-angle-down change-background fa-1x"></i></a> </div>
-                            <h2 >
+                            <h2 style="color: var(--red-color); font-weight: 700;"  >
                                12.99 ر.س. 
                              </h2>
                              <small>شامل الضربيه</small>
                              <div class="each">
+                                 <div class="left-deat">
                                  <p>وحدة البيع:Eeach</p> 
-                                 <div><small>(15 المراجعات)</small></div>
+                                 <div><small>(<span style="color: var(--blue-color);">15 المراجعات</span>)</small></div>
+                                 <p>رقم الصنف JBB410156 رقم المنتج 4</p>
+                                </div>
+                            
+                                <div class="poth-side-deatal">
+                                   <form action="">
+                                    <input type="radio">
+                                    <label for="">كتاب إلكتروني</label>
+                                </form>
+                                <h5 style="color: var(--red-color); font-weight: 700;"  >
+                                    12.99 ر.س. 
+                                  </h5>
+                                </div>
+                                <div class="poth-side-deatal">
+                                    <form action="">
+                                        <input type="radio">
+                                        <label for="">كتاب مطبوع</label>
+                                    </form>
+                                    <h5 style="color: var(--red-color); font-weight: 700;"  >
+                                        17.99 ر.س. 
+                                      </h5>
+                                </div>
                              </div>
                             </section>
                             <aside>
@@ -257,59 +271,72 @@
             </div>
             <img src="assests/images/offer-2.jpg" alt="" id="imgView">
         </div> 
-    <footer>
-        <div class="footer-1">
-        <div class="col1">أنضم إلى نشرتنا البريد</div>
-        <div class="col2">خدمة العملاء</div>
+        <footer>
+            <div class="footer-1">
+                 <div class="first-line" style="display: none;"> 
+            <div clasbigs="first-line">أنضم إلى نشرتنا البريد</div>
+            <div class="first-line">خدمة العملاء</div>
+            <div class="first-line">خدمات</div>
+            <div class="first-line">روابط سريعه</div>
+            <div class="first-line">عن جرير</div>
+            <div class="enter-email">
+                <form action="" style="float:right;">
+                    <input type="email" placeholder="أدخل بريدك الاكتروني"> 
+                    <button>إشترك</button>
+                </form>
+            </div>
+        </div>
+        <div class="col1 ">أنضم إلى نشرتنا البريد</div>
+        <div class="col2 ">خدمة العملاء</div>
         <div class="col3">خدمات</div>
-        <div class="col4">روابط سريعه</div>
-        <div class="col5">عن جرير</div>
-        <div class="col1 enter-email">
+        <div class="col4 ">روابط سريعه</div>
+        <div class="col5 ">عن جرير</div>
+        <div class="col1 enter-email  big-f">
             <form action="" style="float:right;">
                 <input type="email" placeholder="أدخل بريدك الاكتروني"> 
                 <button>إشترك</button>
             </form>
         </div>
-        
-        <div class="col2">مبيعات الشركات</div>
-        <div class="col3">خدمة تقصيد المشريات </div>
-        <div class="col4">إصدارات جرير</div>
-        <div class="col5">من حن</div>
-        <div class="col2">الأسالة المتكررة</div>
-        <div class="col3">خدمات مابعد البيع</div>
-        <div class="col4">قارئ الجزيره</div>
-      
-
-        <div class="col5">الحوكمة</div>
-
-        
-        <div class="col2">دليل التسوق الطبوعات</div>
-        <div class="col3">خدمة الحماية الشامله</div>
-        <div class="col4">شركاء برامج المكافئات</div>
-        <div class="col5">علاقات المستثمرين والتقارير</div>
-        <!-- form here rebeated  -->
-        <div class="col2">مواقع المعارض</div>
-        <div class="col3">حماية أجهزة أبل</div>
-        <div class="col4 take-two-line"> خدمة شركات الإتصالات</div> 
-        <div class="col5">الاستدامة</div>
-
-        <div class="col2">سياسة الضمان</div>
-        <div class="col3">بطاقة خصم جرير</div>
-        <!-- <div class="col4">قارئ الجزيره</div> -->
-        
-        <div class="col5">الأخبار</div>
-        
-        <div class="col1">تواصل معنا</div>
-        <div class="col2">سياسة الاسترجاع والستبدال</div>
-        <div class="col3">بطاقة جرير للهدايا</div>
-        <!-- <div class="col4">شركاء برامج المكافئات</div> -->
-        <div class="col5">فرص العمل</div>
-    </div>
-    <div class="footer-2">
-        
-    </div>
-    </footer>
-    <script src="assests/js/app.js">
+            
+            <div class="col2">مبيعات الشركات</div>
+            <div class="col3">خدمة تقصيد المشريات </div>
+            <div class="col4">إصدارات جرير</div>
+            <div class="col5">من حن</div>
+            <div class="col2">الأسالة المتكررة</div>
+            <div class="col3">خدمات مابعد البيع</div>
+            <div class="col4">قارئ الجزيره</div>
+          
+    
+            <div class="col5">الحوكمة</div>
+    
+            
+            <div class="col2">دليل التسوق الطبوعات</div>
+            <div class="col3">خدمة الحماية الشامله</div>
+            <div class="col4">شركاء برامج المكافئات</div>
+            <div class="col5">علاقات المستثمرين والتقارير</div>
+            <!-- form here rebeated  -->
+            <div class="col2">مواقع المعارض</div>
+            <div class="col3">حماية أجهزة أبل</div>
+            <div class="col4 take-two-line"> خدمة شركات الإتصالات</div> 
+            <div class="col5">الاستدامة</div>
+    
+            <div class="col2">سياسة الضمان</div>
+            <div class="col3">بطاقة خصم جرير</div>
+            <!-- <div class="col4">قارئ الجزيره</div> -->
+            
+            <div class="col5">الأخبار</div>
+            
+            <div class="col1">تواصل معنا</div>
+            <div class="col2">سياسة الاسترجاع والستبدال</div>
+            <div class="col3">بطاقة جرير للهدايا</div>
+            <!-- <div class="col4">شركاء برامج المكافئات</div> -->
+            <div class="col5">فرص العمل</div>
+        </div>
+        <div class="footer-2">
+            
+        </div>
+        </footer>
+    <script src="../assests/js/app.js">
     </script>
 </body>
 </html>
