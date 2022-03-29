@@ -1,3 +1,18 @@
+let ValidationForm = document.getElementById('login-regest');
+let btnAllowed = document.getElementById('btn-allowed');
+btnAllowed.addEventListener('click',(e) =>{
+    e.preventDefault();
+        //    preventDefault;
+        ValidationForm.style.visibility ="hidden";
+}    
+ );
+const btnRegest = document.getElementById('btn-regest');
+const resgestForm = document.getElementById('regest');
+btnRegest.addEventListener('click',(e) =>{
+    e.preventDefault();
+    ValidationForm.style.visibility ="hidden";
+    resgestForm.style.visibility ="visible";
+});
 
 let day1 = document.getElementById('days');
 let  hour1 = document.getElementById('hours');
@@ -227,21 +242,7 @@ btnDisplay.addEventListener("click",(e)=>
 //     s.innerHTML = remanSecondes;
 //     }
 //     setInterval(countDown,1000);
-let ValidationForm = document.getElementById('login-regest');
-let btnAllowed = document.getElementById('btn-allowed');
-btnAllowed.addEventListener('click',(e) =>{
-    e.preventDefault();
-        //    preventDefault;
-        ValidationForm.style.visibility ="hidden";
-}    
- );
-const btnRegest = document.getElementById('btn-regest');
-const resgestForm = document.getElementById('regest');
-btnRegest.addEventListener('click',(e) =>{
-    e.preventDefault();
-    ValidationForm.style.visibility ="hidden";
-    resgestForm.style.visibility ="visible";
-});
+
 // const bookImgContainer = document.querySelectorAll('.book-img-container');
 // const bookCat = document.getElementById('book-cat');
 // const MainDiv = document.getElementById('main-div');
